@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            background-color: #FFFF99;
+            font-family: Arial;
+        }
+
+        .container {
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            border-collapse: collapse;
+            border: 1px solid;
+            padding: 4px;
+            border-style: groove;
+            box-shadow: 1px 3px 5px #999999;
+            border-color: #999999;
+            background-color: #EEEEEE;
+        }
+
+        .row:nth-child(even) {
+            margin-left: 15px;
+            color: #000000;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+
+        .row:nth-child(odd) {
+            margin-right: 15px;
+            z-index: 10;
+            margin-bottom: -1px;
+            margin-top: -1px;
+            color: #666666;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+
+        .row:first-child {
+            border-top-right-radius: 3px;
+        }
+
+        .row:last-child {
+            border-bottom-left-radius: 3px;
+        }
+
+        div.right {
+            margin-right: 5px;
+            text-align: right;
+        }
+
+        div.left {
+            flex: 1 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-left: 5px;
+        }
+
+        .row:nth-child(odd) .right {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .row:nth-child(even) .right {
+            color: #666666;
+            font-weight: bold;
+        }
+
+        @media all and (min-width: 250px) and (max-width: 599px) {
+            div.container {
+                max-width: 200px;
+            }
+            .container div {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        @media all and (min-width: 600px) and (max-width: 899px) {
+            div.container {
+                max-width: 300px;
+            }
+            .container div {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        @media all and (min-width: 900px) and (max-width: 1499px) {
+            div.container {
+                max-width: 450px;
+            }
+        }
+
+        @media all and (min-width: 1500px) {
+            div.container {
+                max-width: 500px;
+            }
+        }
+    </style>
+    <title>Task 1</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="left">Short text</div>
+            <div class="right">Is short.</div>
+        </div>
+        <div class="row">
+            <div class="left">A little bit longer text</div>
+            <div class="right">Is longer</div>
+        </div>
+        <div class="row">
+            <div class="left">Also a little bit longer</div>
+            <div class="right">Yes it is</div>
+        </div>
+        <div class="row">
+            <div class="left">A long text is here, totally for no reason</div>
+            <div class="right">Is long.</div>
+        </div>
+        <div class="row">
+            <div class="left">A long text is here also, for the same reason</div>
+            <div class="right">Is long too!</div>
+        </div>
+        <div class="row">
+            <div class="left">OK</div>
+            <div class="right">OK</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
